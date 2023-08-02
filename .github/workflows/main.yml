@@ -15,10 +15,10 @@ jobs:
         with:
           # 你的 GitHub 的名称
           github_user_name: ${{ github.repository_owner }}
-          # 生成的 .gif 图存储的位置
-          gif_out_path: dist/github-snake.gif
-          # 生成的 .gif 图存储的位置
-          svg_out_path: dist/github-snake.svg
+          outputs: |
+            dist/github-snake.svg
+            dist/github-snake-dark.svg?palette=github-dark
+            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9
       - uses: crazy-max/ghaction-github-pages@v2.5.0
         with:
           target_branch: output
